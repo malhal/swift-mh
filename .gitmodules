@@ -1,0 +1,7 @@
+[submodule "swift-mh-swiftui"]
+    path = swift-mh-swiftui
+    url = https://github.com/malhal/swift-mh-swiftui.git
+
+[submodule "swift-mh-foundation"]
+    path = swift-mh-foundation
+    url = https://github.com/malhal/swift-mh-foundation.git
