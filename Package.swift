@@ -1,5 +1,4 @@
 // swift-tools-version: 5.9
-// swift-tools-version: 5.9
 import PackageDescription
 
 let package = Package(
@@ -10,17 +9,23 @@ let package = Package(
     ],
     products: [
         .library(name: "MH", targets: ["MH"]),
+        .library(name: "MHFoundation", targets: ["MHFoundation"]),
+        .library(name: "MHSwiftUI", targets: ["MHSwiftUI"]),
     ],
-    dependencies: [
+    //dependencies: [
         // This points to the folder created by the Git Submodule
-        .package(path: "swift-mh-swiftui")
-        ],
+    //    .package(path: "swift-mh-swiftui")
+    //    ],
     targets: [
         .target(
-            name: "MH",
-            dependencies: [
-                .product(name: "MHSwiftUI", package: "swift-mh-swiftui")
-            ]
+            name: "MH"
+        ),
+        .target(
+            name: "MHFoundation"
+        ),
+        .target(
+            name: "MHSwiftUI",
+            dependencies: ["MHFoundation"]
         )
     ]
 )
