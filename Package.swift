@@ -4,6 +4,10 @@ import PackageDescription
 
 let package = Package(
     name: "swift-mh",
+    platforms: [
+        .iOS(.v17),   // Sets minimum to iOS 17 (recommended for 2026)
+        .macOS(.v14)  // Sets minimum to macOS Sonoma
+    ],
     products: [
         .library(name: "MH", targets: ["MH"]),
     ],
