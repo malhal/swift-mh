@@ -13,15 +13,13 @@ let package = Package(
     ],
     dependencies: [
         // This points to the folder created by the Git Submodule
-        .package(path: "swift-mh-swiftui"),
-        .package(path: "swift-mh-foundation")
+        .package(path: "swift-mh-swiftui")
         ],
     targets: [
         .target(
             name: "MH",
             dependencies: [
-                .product(name: "MHSwiftUI", package: "swift-mh-swiftui"),
-                .product(name: "MHFoundation", package: "swift-mh-foundation")
+                .product(name: "MHSwiftUI", package: "swift-mh-swiftui")
             ]
         )
     ]
