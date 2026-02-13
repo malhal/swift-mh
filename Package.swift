@@ -11,6 +11,7 @@ let package = Package(
         .library(name: "MH", targets: ["MH"]),
         .library(name: "MHFoundation", targets: ["MHFoundation"]),
         .library(name: "MHSwiftUI", targets: ["MHSwiftUI"]),
+        .library(name: "MHSwiftData", targets: ["MHSwiftData"]),
     ],
     //dependencies: [
         // This points to the folder created by the Git Submodule
@@ -18,10 +19,14 @@ let package = Package(
     //    ],
     targets: [
         .target(
-            name: "MH"
+            name: "MH",
+            dependencies: ["MHSwiftUI", "MHFoundation", "MHSwiftData"]
         ),
         .target(
             name: "MHFoundation"
+        ),
+        .target(
+            name: "MHSwiftData"
         ),
         .target(
             name: "MHSwiftUI",

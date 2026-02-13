@@ -9,4 +9,12 @@ import Foundation
 
 public extension Bundle {
     static let swiftUI = Bundle(identifier: "com.apple.SwiftUI")!
+    
+    var name: String? {
+        object(forInfoDictionaryKey: "CFBundleName") as? String
+    }
+    
+    var displayName: String? {
+        object(forInfoDictionaryKey: "CFBundleDisplayName") as? String
+    }
 }

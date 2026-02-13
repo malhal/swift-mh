@@ -8,22 +8,21 @@ import Foundation
 import SwiftUI
 import MHFoundation
 
-extension Text {
-    public enum MainMenu {
+public extension Text {
+    enum MainMenu {
         private static let bundle = Bundle.swiftUI
         private static let table = "MainMenu"
 
         /// Helper to fetch the App Name from your project's Info.plist
         private static var appName: String {
-            Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String
-            ?? Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String
+            Bundle.main.displayName
+            ?? Bundle.main.name
             ?? "App"
         }
 
         public static var about: Text {
             about(appName)
         }
-        
         
         /// Usage: Text.MainMenu.about() -> "About ActorStream"
         /// Usage: Text.MainMenu.about("Custom Name") -> "About Custom Name"
