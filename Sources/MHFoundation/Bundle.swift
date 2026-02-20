@@ -18,3 +18,9 @@ public extension Bundle {
         object(forInfoDictionaryKey: "CFBundleDisplayName") as? String
     }
 }
+
+#if canImport(SwiftUI)
+import SwiftUI
+
+
+#endif

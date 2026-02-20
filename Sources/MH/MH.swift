@@ -7,6 +7,7 @@
 @_exported import MHFoundation
 @_exported import MHSwiftUI
 @_exported import MHSwiftData
+@_exported import MHCoreData
 
 public struct MHStruct {
     public init() {
