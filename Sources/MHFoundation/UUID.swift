@@ -9,3 +9,5 @@ import Foundation
 extension UUID {
     public static let zero = UUID(uuid: (0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)) // "00000000-0000-0000-0000-000000000000"
 }
+
+public protocol UUIDRepresentable: Hashable, Codable, RawRepresentable where RawValue == UUID { }
